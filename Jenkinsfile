@@ -13,7 +13,7 @@ pipeline{
             }
         }
         stage('compile'){
-            agent {label 'linux_slave'}
+            agent any
             steps{
                 git 'https://github.com/subhasish5543/DevOpsClassCodes.git'
                 sh 'mvn compile'
